@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Bird</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Find Your Bird</h1>
+        <form id="upload-form" enctype="multipart/form-data">
+            <label for="image-upload" class="custom-file-upload">
+                Choose an image
+            </label>
+            <input type="file" id="image-upload" name="image" accept="image/*" />
+            <button type="submit">Upload</button>
+        </form>
+        <div id="result" class="result-container">
+            <h2>Prediction Result</h2>
+            <img id="uploaded-image" src="#" alt="Uploaded Bird Image" style="display:none;" />
+            <p id="label"></p>
+            <p id="scientific-name"></p>
+            <p id="confidence"></p>
+        </div>
+    </div>
+</body>
+</html>
+
