@@ -33,12 +33,13 @@ def predict():
     predicted_class_str = str(predicted_class)
     label = bird_names[predicted_class_str]['label'].title()
     scientific_name = bird_names[predicted_class_str]['scientific_name'].title()
+    confidence = float(np.max(predictions, axis=1)[0])
 
     return jsonify({
         'label': label,
-        'scientific_name': scientific_name
+        'scientific_name': scientific_name,
+        'confidence': confidence
     })
 
 if __name__ == '__main__':
-    app.run(debug=True)
-
+    app.run()
