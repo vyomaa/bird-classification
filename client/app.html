@@ -8,23 +8,20 @@
     <script src="app.js"></script>
     <link rel="stylesheet" href="app.css">
     <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <h1>Find Your Bird</h1>
         <form id="upload-form" enctype="multipart/form-data">
-            <label for="image-upload" class="custom-file-upload">
-                Choose an image
-            </label>
-            <input type="file" id="image-upload" name="image" accept="image/*" />
-            <button type="submit">Upload</button>
+            <input type="file" id="image-upload" name="image" accept="image/*" style="display: none;" />
+            <button type="button" id="upload-button">Upload your Image</button>
         </form>
         <div id="result" class="result-container">
             <div class="image-wrapper" >
                 <img id="uploaded-image" src="#" alt="Uploaded Bird Image" style="display:none;" />
             </div>
-            <h2>Prediction Result</h2>
-            <p id="label"></p>
+            <h2 id="label"></h2>
             <p id="scientific-name"></p>
             <p id="confidence"></p>
         </div>

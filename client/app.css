@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: 'Marck Script', cursive;
+    font-family: 'Merriweather';
     background: url('assets/foliage.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
@@ -9,41 +9,25 @@ body {
 }
 
 .container {
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 h1 {
+    font-family: 'Marck Script', cursive;
     font-size: 3em;
     color: #fff;
-}
-
-.custom-file-upload {
-    display: inline-block;
-    padding: 10px 20px;
-    cursor: pointer;
-    background-color: #4CAF50;
-    color: white;
-    border-radius: 4px;
-    font-size: 1.2em;
-}
-
-.custom-file-upload:hover {
-    background-color: #45a049;
-}
-
-input[type="file"] {
-    display: none;
 }
 
 button {
     margin-top: 10px;
     padding: 10px 20px;
-    font-size: 1.2em;
+    font-size: 1em;
     color: #fff;
     background-color: #4CAF50;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-family: 'Merriweather';
 }
 
 button:hover {
@@ -67,6 +51,7 @@ button:hover {
 }
 
 footer {
+    font-family: 'Marck Script', cursive;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -75,4 +60,6 @@ footer {
     text-align: center;
     font-size: 1em;
     height: 30px;
+    line-height: 0px;
+    padding: 5px 0;
 }
