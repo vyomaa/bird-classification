@@ -2,6 +2,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
     var form = document.getElementById('upload-form');
     var imageInput = document.getElementById('image-upload');
     var resultsDiv = document.getElementById('result');
+    var uploadedImage = document.getElementById('uploaded-image');
+    var label = document.getElementById('label');
+    var scientificName = document.getElementById('scientific-name');
+    var confidence = document.getElementById('confidence');
 
     if (form) {
         form.addEventListener('submit', function (e) {
@@ -17,8 +21,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
             })
             .then(response => response.json())
             .then(data => {
-                resultsDiv.innerHTML = `<p>Predicted Bird: ${data.label}</p>
-                                        <p>Scientific Name: ${data.scientific_name}</p>`;
+                uploadedImage.src = URL.createObjectURL(file);
+                uploadedImage.style.display = 'block';
+
+                label.innerText = 'Predicted Bird: ' + data.label;
+                scientificName.innerText = 'Scientific Name: ' + data.scientific_name;
+                //confidence.innerText = 'Confidence: ' + (data.confidence * 100).toFixed(2) + '%';
             })
             .catch(error => console.error('Error:', error));
         });
